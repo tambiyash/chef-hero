@@ -1,0 +1,85 @@
+.__dml_table {
+  width: 90%;
+  background-color: #f7f7f7;
+  margin: auto;
+  box-sizing: border-box;
+
+  & tr {
+    border-collapse: collapse;
+
+    & th {
+      text-align: left;
+      font-weight: 700;
+    }
+
+    & td {
+      font-weight: 300;
+      .cell-padding-right {
+        padding-right: 5px;
+      }
+    }
+
+    & th, td {
+      align-items: center;
+      padding: 0.5rem;
+      border-top: 0.5px solid #d9d9d9;
+      &:first-child {
+        border-left: 0.5px solid #d9d9d9;
+      }
+      // border-left: 1px solid gainsboro;
+      &:last-child {
+        border-right: 0.5px solid #d9d9d9;
+      }
+    }
+
+    &:last-child {
+      & th, td {
+        border-bottom: 0.5px solid #d9d9d9;
+      }
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-label {
+  width: 100%;
+  flex: 1;
+  color: #696969;
+}
+
+.paginate-wrapper {
+  display: flex;
+  margin: 20px 50px;
+  width: fit-content;
+  .paginator {
+    .button:first-child {
+      margin-right: 20px;
+    }
+    .button:last-child {
+      margin-left: 20px;
+    }
+    .pagination-label {
+      font-weight: 700;
+    }
+  }
+
+  .paginate-limit {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    .select {
+      margin-left: 10px;
+      width: 50px;
+    }
+  }
+  
+  // .select {
+  //   height: inherit;
+  //   width: 100px;
+  // }
+}
