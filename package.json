@@ -2,6 +2,7 @@
   "name": "chef-hero",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://tambiyash.github.io/chef-hero",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@reduxjs/toolkit": "^1.6.0",
@@ -22,14 +23,15 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "server": "json-server --watch ./src/api/db.json --port 4001",
-    "start": "react-scripts start",
-    "dev": "run-p server start",
+    "server": "json-server ./src/api/db.json --port 4001",
+    "start": "run-p server react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
