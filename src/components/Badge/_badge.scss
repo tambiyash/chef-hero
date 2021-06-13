@@ -1,0 +1,71 @@
+.badge-span {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #137cbd;
+  min-width: 20px;
+  height: 20px;
+  max-width: 100%;
+  padding: 2px 8px;
+  color: #f5f8fa;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 2px;
+
+  svg {
+    fill: #f5f8fa;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.rounded {
+    border-radius: 30px;
+  }
+
+  &.dark {
+    background-color: #696969;
+  }
+
+  &.yellow {
+    background-color: #f0f018;
+    color: #333232;
+    svg {
+      fill: #333232;
+    }
+  }
+
+  &.green {
+    background-color: #6bb29c;
+    color: #333232;
+    svg {
+      fill: #333232;
+    }
+  }
+
+  &.purple {
+    background-color: #c8a1ed;
+    color: #333232;
+    svg {
+      fill: #333232;
+    }
+  }
+
+  &.bold-text {
+    font-weight: 700;
+  }
+
+  .badge-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    padding-right: 5px;
+  }
+
+  .icon {
+    padding-right: 0;
+  }
+}

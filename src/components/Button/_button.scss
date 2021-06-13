@@ -1,0 +1,35 @@
+.button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: #333232 0.5px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: #333232;
+  color: #ffff;
+  &.btn-icon {
+    padding-left: 5px;
+    padding-right: 10px;
+    svg {
+      padding-right: 5px;
+      fill: #ffff;
+    }
+  }
+  &.rounded {
+    border-radius: 30px;
+  }
+  &.blue {
+    background-color: #137cbd;
+  }
+  &.purple {
+    background-color: #c8a1ed;
+  }
+}
