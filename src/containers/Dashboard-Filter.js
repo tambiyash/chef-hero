@@ -5,6 +5,7 @@ import { Button, MultiSelect } from "../components";
 import { fetchAllOrders } from "../slices/orderSlice";
 import DataTable from "./DataTable";
 import "./_dashboard.scss";
+import { removeDuplicates } from "../utils";
 
 const Dashboard = () => {
   let history = useHistory();
@@ -45,8 +46,7 @@ const Dashboard = () => {
 
   const getSuppliers = () => { 
     const suppliersAll = orders.map(order => order.vendorName.trim());
-    const suppliersUnique = suppliersAll.filter((v, i, a) => a.indexOf(v) === i);
-    return suppliersUnique;
+    return removeDuplicates(suppliersAll);
   }
 
   const handleVendorFilter = (values) => {
@@ -73,6 +73,7 @@ const Dashboard = () => {
       <div className="form-control">
         <MultiSelect
           label="Suppliers:"
+          defaultOption={"All Suppliers"}
           items={getSuppliers()}
           onSelectChange={handleVendorFilter}
           onReset={handleResetFilter}

@@ -4,7 +4,7 @@ import { Button } from "../Button";
 import { Select } from "../Select";
 import "./_multiselect.scss";
 
-const MultiSelect = ({ label, items, onSelectChange, onReset }) => {
+const MultiSelect = ({ defaultOption, label, items, onSelectChange, onReset }) => {
   const [selectedValues, setSelectedValues] = useState([]);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const MultiSelect = ({ label, items, onSelectChange, onReset }) => {
       
       <div className="filter-wrapper">
         <Select onChange={handleChange}>
-          <option key="all" selected={!selectedValues.length} disabled>{"All Suppliers"}</option>
+          <option key="all" selected={!selectedValues.length} disabled>{defaultOption}</option>
           {items.map((item) => (
             <option key={item}>
               {item}
