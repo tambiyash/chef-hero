@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/chef-hero/static/css/main.956c0c6b.chunk.css",
+    "main.js": "/chef-hero/static/js/main.65bbabd0.chunk.js",
+    "main.js.map": "/chef-hero/static/js/main.65bbabd0.chunk.js.map",
+    "runtime-main.js": "/chef-hero/static/js/runtime-main.65434a76.js",
+    "runtime-main.js.map": "/chef-hero/static/js/runtime-main.65434a76.js.map",
+    "static/js/2.5102d367.chunk.js": "/chef-hero/static/js/2.5102d367.chunk.js",
+    "static/js/2.5102d367.chunk.js.map": "/chef-hero/static/js/2.5102d367.chunk.js.map",
+    "static/js/3.03077e22.chunk.js": "/chef-hero/static/js/3.03077e22.chunk.js",
+    "static/js/3.03077e22.chunk.js.map": "/chef-hero/static/js/3.03077e22.chunk.js.map",
+    "index.html": "/chef-hero/index.html",
+    "static/css/main.956c0c6b.chunk.css.map": "/chef-hero/static/css/main.956c0c6b.chunk.css.map",
+    "static/js/2.5102d367.chunk.js.LICENSE.txt": "/chef-hero/static/js/2.5102d367.chunk.js.LICENSE.txt",
+    "static/media/logo.b258f186.svg": "/chef-hero/static/media/logo.b258f186.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65434a76.js",
+    "static/js/2.5102d367.chunk.js",
+    "static/css/main.956c0c6b.chunk.css",
+    "static/js/main.65bbabd0.chunk.js"
+  ]
+}
