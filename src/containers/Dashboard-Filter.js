@@ -13,7 +13,7 @@ const Dashboard = () => {
   const orders = useSelector((state) => state?.orders?.allOrders?.data);
   const [dashboardState, setDashboardState] = useState({
     data: [],
-    sortedBy: { vendorName: "ascending" }
+    sortedBy: {}
   });
 
   useEffect(() => {
@@ -25,19 +25,31 @@ const Dashboard = () => {
 
   useEffect(() => {
     dispatch(fetchAllOrders());
-    // dispatch(fetchPaginatedOrders({start: dashboardState.currentPage - 1, end: dashboardState.limit}));
   }, [dispatch]);
 
   useEffect(() => {
     if (dashboardState.sortedBy) {
       const sortKey = Object.keys(dashboardState.sortedBy)[0];
       const direction = dashboardState.sortedBy[sortKey];
-      
       setDashboardState((prev) => ({
         ...prev,
-        data: prev.data.sort((a, b, index) => {
-          console.log(dashboardState.data[index], direction)
-          return direction === 'ascending' ? a[sortKey] > b[sortKey] : a[sortKey] < b[sortKey];
+        data: prev.data.slice().sort((a, b) => {
+          if (direction === "ascending") {
+            if (a[sortKey] > b[sortKey]) {
+              return 1;
+            }
+            else {
+              return -1;
+            }
+          }
+          if (direction === "descending") {
+            if (a[sortKey] < b[sortKey]) {
+              return 1;
+            }
+            else {
+              return -1;
+            }
+          }
         }),
       }));
     }
